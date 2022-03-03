@@ -1,0 +1,33 @@
+<script>
+  let input=prompt("입력해주세요.");
+  
+  if(input.indexOf("안녕")>=0) {
+      alert("안녕하세요.");
+  } else if (input.indexOf("잘자")>=0 || input.indexOf("잘 자")>=0) {
+      alert("안녕히 주무세요.");
+  }
+</script>
+
+<!--
+  *indexOf(searchvalue, position) 함수
+
+  문자열에서 특정문자열을 찾고, 검색된 문자열이 '첫번째'로 나타나는 위에 리턴한다.
+  searchavlue : 필수 입력값, 찾을 문자열
+  position : 기본값은 0, 필수입력값을 찾을 위치.
+
+  - 찾는 문자열이 없으면 -1을 리턴한다.
+  - 문자열을 찾을 땐, 대소문자를 구분한다.
+
+  ~~~
+  ex)
+  const str = "abab";
+
+  document.writeln(str.indexOf('ab')); // 0
+  document.writeln(str.indexOf('ba')); // 1
+  document.writeln(str.indexOf('abc')); // -1
+  document.writeln(str.indexOf('AB')); // -1
+
+  //0 1 -1 -1
+
+  ~~~
+-->
