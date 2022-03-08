@@ -1,0 +1,15 @@
+<script>
+  for(let star=1; star<=5; star +=1) {
+    console.log('*'.repeat(star));
+   }
+</script>
+
+// for 반복문으로 star 변수를 만든다. 1 ~ 5까지 반복하게 만듦. '.repeat'라는 메소드를 사용해 '*'를 변수만큼 출력하게 만든다.
+
+<!--
+repeat
+
+--.repeat(); 
+
+예를들어, 'a'.repeat(3); -> aaa;
+-->
