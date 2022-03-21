@@ -7,33 +7,32 @@
   <title>Window Size</title>
   <style>
     .tag {
-      display: block;
-      background-color: aquamarine;
-      padding: 16px;
-      margin: 16px;
-      font-size: 20px;
+      display: inline-block;
+      background-color: thistle;
+      padding:16px;
+      margin:16px;
+      font-size: 48px;
     }
   </style>
 </head>
 <body>
   <div class="tag">
-    window size
+    Window Size
   </div>
-
   <script>
-    const $tag = document.querySelector('.tag');
-    
-    function update() {
-    
-       console.log('window.screen : ${window.screen.width}, ${window.screen.height}')
-       window.outher : ${window.outerWidth}, ${window.outerHeight}
-       window.inner : ${window.innerWidth}, ${window.innerHeight}
-    
+    const tag = document.querySelector('.tag');
+    function updateTag() {
+      tag.innerHTML = `
+        window.screen : ${window.screen.width} <br/>
+        window.outer : ${window.outerHeight} <br/>
+        window.inner : ${window.innerHeight} <br/>
+        documentElement.clientWidth : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+      `;
     }
-
-    window.addEventListener('resize', update);
-    update();
+    window.addEventListener('resize', () => {
+      updateTag();    
+    })
+    updateTag();
   </script>
-
 </body>
 </html>
