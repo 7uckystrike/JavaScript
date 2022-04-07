@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>find</title>
+  <style>
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #04B4AE;
+      border-radius: 50px;
+      margin: 20px;
+    }
+
+    .different {
+      width: 100px;
+      height: 100px;
+      background-color: #FFBF00;
+      border-radius: 50px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button>Find one!</button>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="different"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <script>
+    const button = document.querySelector('button');
+    const different = document.querySelector('.different');
+
+    button.addEventListener('click', () => {
+      different.scrollIntoView({ behavior : 'smooth'});
+    })
+  </script>
+</body>
+</html>
